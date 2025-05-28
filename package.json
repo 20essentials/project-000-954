@@ -1,0 +1,47 @@
+{
+  "name": "esland-landing",
+  "type": "module",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "lint": "prettier --write \"**/*.{js,jsx,ts,tsx,md,mdx,astro}\" && eslint --fix \"src/**/*.{js,ts,jsx,tsx,astro}\"",
+    "script:create-thumbs": "bun ./scripts/create-thumbnails-gallery.ts",
+    "script:create-meta": "bun ./scripts/create-meta-from-gallery.ts",
+    "script:create-vote-inserts": "bun ./scripts/create-vote-inserts.ts",
+    "webp": "bun ./scripts/convert-all.ts",
+    "dl": "bun ./scripts/download-all-images.ts",
+    "dl:voting": "bun ./scripts/dl-voting.ts"
+  },
+  "dependencies": {
+    "@appnest/masonry-layout": "2.2.3",
+    "@astrojs/check": "0.7.0",
+    "@astrojs/preact": "3.3.0",
+    "@astrojs/tailwind": "6.0.0",
+    "@astrojs/vercel": "7.0.0",
+    "@auth/core": "0.34.2",
+    "@fontsource-variable/onest": "5.0.2",
+    "@justinribeiro/lite-youtube": "1.5.0",
+    "@libsql/client": "0.4.2",
+    "astro": "4.6.0",
+    "auth-astro": "4.2.0",
+    "canvas-confetti": "^1.9.2",
+    "cookie": "^0.6.0",
+    "image-meta": "0.2.0",
+    "minimasonry": "1.3.2",
+    "photoswipe": "5.4.3",
+    "preact": "10.19.6",
+    "tailwindcss": "3.4.3",
+    "typescript": "5.4.5",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/bun": "1.0.1",
+    "@types/canvas-confetti": "^1.6.4",
+    "sharp": "0.33.3",
+    "tailwindcss-animated": "1.0.1"
+  }
+}

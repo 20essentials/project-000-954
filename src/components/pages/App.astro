@@ -1,0 +1,30 @@
+---
+import Layout from "@/layouts/Layout.astro"
+import Video from "@/components/Video.astro"
+import Intro from "@/components/Intro.astro"
+import Bento from "@/components/Bento.astro"
+import PreFooter from "@/components/PreFooter.astro"
+import { getI18N } from "@/i18n"
+
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
+---
+
+<Layout title=`${i18n.SEO_TITLE_1}&nbsp;${new Date().getFullYear()}&nbsp;${i18n.SEO_TITLE_2}`  description={i18n.SEO_DESCRIPTION}>
+  <link
+    rel="preload"
+    href="/fonts/jura.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+    slot="preload"
+  />
+
+  <Video />
+
+  <main>
+    <Intro />
+    <Bento />
+    <PreFooter />
+  </main>
+</Layout>
